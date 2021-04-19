@@ -1,8 +1,9 @@
 name: ESLint check
 on: [push]
 jobs:
-  build:
+  linter:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: make install
       - run: make lint
