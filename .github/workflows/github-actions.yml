@@ -1,7 +1,7 @@
-name: GitHub Actions
+name: ESLint check
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
       - run: make lint
