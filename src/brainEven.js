@@ -35,7 +35,7 @@ const startBrainEven = () => {
     if (isAnswerValid) validAnswerCount += 1;
     const reaction = isAnswerValid
       ? 'Correct!'
-      : `${answer} is wrong answer ;(. Correct answer was "no". \n Let\'s try again, ${name}!`;
+      : `${answer} is wrong answer ;(. Correct answer was "no". \n Let's try again, ${name}!`;
     console.log(reaction);
   });
 
