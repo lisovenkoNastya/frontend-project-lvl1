@@ -3,6 +3,7 @@ import {
 } from './cli.js';
 import brainEven from './games/brainEven.js';
 import brainCalc from './games/brainCalc.js';
+import brainGcd from './games/brainGcd.js';
 
 const iterationCount = 3;
 
@@ -24,7 +25,7 @@ const startGame = (game) => {
   console.log(game.rules);
 
   tasks.forEach((task) => {
-    const taskStr = Array.isArray(task) ? task.join('') : task;
+    const taskStr = Array.isArray(task) ? task.join(' ') : task;
     showTask(taskStr);
     const answer = getAnswer();
     const isAnswerValid = game.checkAnswer(task, answer);
@@ -37,7 +38,9 @@ const startGame = (game) => {
 
 const startBrainEven = () => startGame(brainEven);
 const startBrainCalc = () => startGame(brainCalc);
+const startBrainGcd = () => startGame(brainGcd);
 export {
   startBrainEven,
   startBrainCalc,
+  startBrainGcd,
 };
