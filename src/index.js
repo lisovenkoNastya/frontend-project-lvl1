@@ -4,6 +4,7 @@ import {
 import brainEven from './games/brainEven.js';
 import brainCalc from './games/brainCalc.js';
 import brainGcd from './games/brainGcd.js';
+import brainProgression from './games/brainProgression.js';
 
 const iterationCount = 3;
 
@@ -39,8 +40,10 @@ const startGame = (game) => {
 const startBrainEven = () => startGame(brainEven);
 const startBrainCalc = () => startGame(brainCalc);
 const startBrainGcd = () => startGame(brainGcd);
+const startBrainProgression = () => startGame(brainProgression);
 export {
   startBrainEven,
   startBrainCalc,
   startBrainGcd,
+  startBrainProgression,
 };
