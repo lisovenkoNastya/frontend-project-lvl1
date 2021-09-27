@@ -1,6 +1,6 @@
 const generateTask = () => {
-  const a = Math.round(Math.random() * 100);
-  const b = Math.round(Math.random() * 100);
+  const a = Math.round(Math.random() * 99) + 1;
+  const b = Math.round(Math.random() * 99) + 1;
   return [a, b];
 };
 
