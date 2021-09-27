@@ -35,7 +35,7 @@ const startGame = (game) => {
     showReaction(isAnswerValid, answer, name);
   });
 
-  if (validAnswerCount === iterationCount) console.log(`Congratulations, ${name}`);
+  if (validAnswerCount === iterationCount) console.log(`Congratulations, ${name}!`);
 };
 
 const startBrainEven = () => startGame(brainEven);
