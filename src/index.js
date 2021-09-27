@@ -25,15 +25,16 @@ const startGame = (game) => {
   const tasks = generateTasks(game);
 
   console.log(game.rules);
-
-  tasks.forEach((task) => {
+  for (let i = 0; i < iterationCount; i += 1) {
+    const task = tasks[i];
     const taskStr = Array.isArray(task) ? task.join(' ') : task;
     showTask(taskStr);
     const answer = getAnswer();
     const isAnswerValid = game.checkAnswer(task, answer);
     if (isAnswerValid) validAnswerCount += 1;
     showReaction(isAnswerValid, answer, name);
-  });
+    if (!isAnswerValid) break;
+  }
 
   if (validAnswerCount === iterationCount) console.log(`Congratulations, ${name}!`);
 };
