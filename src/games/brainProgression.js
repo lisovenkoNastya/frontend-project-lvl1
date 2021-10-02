@@ -25,7 +25,7 @@ const checkAnswer = (task, answer) => {
       === (task[questPosition - 1] - task[questPosition - 2]);
   } else {
     isCorrect = (task[questPosition + 1] - answer)
-      === (task[questPosition + 2] - task[questPosition + 1]);
+      === (answer - task[questPosition - 1]);
   }
   return isCorrect;
 };
