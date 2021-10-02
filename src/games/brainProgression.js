@@ -16,7 +16,18 @@ const generateTask = () => {
 
 const checkAnswer = (task, answer) => {
   const questPosition = task.indexOf(questionSymbol);
-  return answer - task[questPosition - 1] === task[questPosition + 1] - answer;
+  let isCorrect;
+  if (questPosition === 0) {
+    isCorrect = (task[questPosition + 1] - answer)
+      === (task[questPosition + 2] - task[questPosition + 1]);
+  } else if (questPosition === task.length - 1) {
+    isCorrect = (answer - task[questPosition - 1])
+      === (task[questPosition - 1] - task[questPosition - 2]);
+  } else {
+    isCorrect = (task[questPosition + 1] - answer)
+      === (task[questPosition + 2] - task[questPosition + 1]);
+  }
+  return isCorrect;
 };
 
 const brainGcd = {
