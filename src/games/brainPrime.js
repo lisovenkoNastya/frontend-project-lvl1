@@ -4,7 +4,7 @@ const checkAnswer = (number, answer) => {
   let isPrime = false;
   if (number === 2) {
     isPrime = true;
-  } else {
+  } else if (number > 2) {
     const min = Math.sqrt(number);
     let k = 2;
     while (number % k !== 0 && k <= min) {
