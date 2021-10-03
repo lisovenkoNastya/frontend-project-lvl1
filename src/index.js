@@ -34,4 +34,4 @@ const startGame = (game) => {
   if (validAnswerCount === iterationCount) console.log(`Congratulations, ${name}!`);
 };
 
-export { startGame };
+export default startGame;
